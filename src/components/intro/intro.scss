@@ -1,0 +1,69 @@
+.intro {
+    background-color: white;
+    display: flex;
+
+    .left {
+        flex: 0.5;
+
+        .imgContainer {
+            width: 700px;
+            height: calc(100vh - 70px);
+
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+
+        .wrapper {
+            padding-left: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3 {
+                font-size: 30px;
+
+                span {
+                    font-size: inherit;
+                    color: crimson;
+                }
+                .ityped-cursor {
+                    opacity: 1;
+                    animation: blink 1s infinite;
+                }
+                 
+                @keyframes blink {
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        a {
+            position: absolute;
+            bottom: 10px;
+            left: 50vw;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+}

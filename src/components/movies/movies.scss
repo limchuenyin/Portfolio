@@ -1,0 +1,41 @@
+.moviesContainer {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin-left: 40vw;
+    transform-style: preserve-3d;
+    animation: slid 30s linear infinite;
+    span {
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+        
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: 2s;
+            }
+        }
+    span:hover img {
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+@keyframes slid {
+0% {
+    transform: perspective(1000px) rotateY(0deg);
+}
+100% {
+    transform: perspective(1000px) rotateY(360deg);
+}
+}
